@@ -1,0 +1,88 @@
+{% style %}
+  .contact-us {
+  }
+
+  .contact-us__wrapper {
+    padding: 2rem 2rem;
+    display: flex;
+  }
+
+  .contact-us__wrapper .contact-us__col:first-child {
+    flex: 0 0 40%;
+  }
+
+  @media (max-width: 768px) {
+    .contact-us__wrapper {
+      flex-direction: column;
+    }
+    .contact-us__wrapper .contact-us__col:first-child {
+      flex: 0 0 100%;
+    }
+  }
+
+  .contact-us__col:first-child {
+    flex: 0 0 40%;
+  }
+
+  .contact-us__title {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-xl);
+    font-style: italic;
+    font-weight: var(--fw-heading-heavy);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+{% endstyle %}
+
+{% assign hero_image_url = section.settings.image %}
+
+<div class="contact-us full-height">
+  <div class="hero-image">
+    <img
+      src="{{ hero_image_url | img_url:'2000x' }}"
+      class="cover"
+      width="100"
+      height="auto"
+      loading="lazy"
+    >
+  </div>
+  <div class="contact-us__wrapper container">
+    <div class="contact-us__col">
+      <h1 class="contact-us__title">Contact Us</h1>
+    </div>
+    <div class="contact-us__col contact-us__copy flow">
+      <p>
+        Need help? Email help@pzaz.com, text (877) 562-6417, call (929)-374-2501 or send 🐌 mail to our office: Pzaz,
+        Inc. — 20 Exchange Place, New York NY 10005.
+      </p>
+
+      <p>
+        Have some very zazzy parties and events going on? Email friends@pzaz.com with any opportunities to collaborate.
+      </p>
+      <p>
+        College student? <a href="pzaz.com/pages/college">Click here</a> to learn about opportunities to work with us on
+        campus.
+      </p>
+      <p>
+        Press: press@pzaz.com.<br>
+        Wholesale: sales@pzaz.com.
+      </p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "contact-us-section",
+  "tag": "section",
+  "class": "section bg-light",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ]
+}
+{% endschema %}

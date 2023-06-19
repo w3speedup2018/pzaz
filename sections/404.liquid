@@ -1,0 +1,71 @@
+{% style %}
+  .four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .four h1 {
+    font-size: 6vw;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+  }
+
+  .four__content {
+    position: relative;
+  }
+
+  .four-image {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: 100%;
+    z-index: 0;
+  }
+{% endstyle %}
+<div class="four full-height">
+  <div class="four__content">
+    <h1 class="ff-heading text-center">
+      THIS IS NOT<br>
+      A PAGE
+    </h1>
+    <p>redirecting in <span id="four-countdown" class="fw-body-bold">5</span></p>
+    <div class="four-image">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0532/8234/1052/files/red_box_transparent.png?v=1675207595"
+        alt="404"
+        loading="lazy"
+        width="auto"
+        height="auto"
+      >
+    </div>
+  </div>
+</div>
+
+<script>
+  var count = 5;
+  var interval = setInterval(function () {
+    document.getElementById('four-countdown').innerHTML = count;
+    count--;
+    if (count === 0) {
+      clearInterval(interval);
+      window.location.href = '/';
+    }
+  }, 1000);
+</script>
+
+{% schema %}
+{
+  "name": "404-page",
+  "tag": "section",
+  "class": "section bg-primary",
+  "settings": []
+}
+{% endschema %}
