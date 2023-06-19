@@ -117,15 +117,9 @@
     /* margin-inline: auto; */
   }
   #power {
-    flex-direction: column;
-    /* min-height: 100vh; */
-  }
-  #power-right {
-    padding-bottom: 0px;
-  }
-  .power__items {
-    margin-bottom: 0px;
-    padding-top: 0px;
+    flex-direction: column-reverse;
+    min-height: 100vh;
+    min-height: 100svh;
   }
 
   #power-media {

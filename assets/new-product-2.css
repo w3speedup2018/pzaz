@@ -141,11 +141,6 @@ input[type='radio']#super-sour:not(:checked) + label:hover {
   font-size: var(--fs-lg);
   max-width: 20rem;
 }
-.product-price-save {
-  font-weight: var(--fw-body-bold, 700);
-  font-size: var(--fs-lg);
-  margin-top: 0px;
-}
 
 .product-price {
   font-family: var(--ff-heading);

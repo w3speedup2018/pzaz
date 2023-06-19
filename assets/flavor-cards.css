@@ -189,13 +189,9 @@
     width: 100%;
     height: calc(var(--expanded-width-ratio) * 100%);
   }
-  .flavor-card[data-active='false']   .flavor-card__image {
-    height: 125%;
-    top: -12px;
-  }
+
   .flavor-card__image {
     transform: rotate(90deg) translateX(0) scale(2.5);
-   
   }
   .flavor-card__copy {
     font-weight: var(--fw-body-medium);

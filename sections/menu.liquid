@@ -293,7 +293,7 @@
               </div>
               <div class="menu-card-image">
                 {% if block.settings.image %}
-                  {{ block.settings.image | image_url: width: 400 | image_tag }}
+                  {{ block.settings.image | image_url: width: 400 | image_tag | replace: ' src="' , ' data-class="LazyLoad" data-src="' | replace: ' srcset="' , ' data-srcset="' }}
                 {% endif %}
               </div>
               <p class="menu-card-body">

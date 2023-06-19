@@ -41,14 +41,9 @@ class VariantSelector extends HTMLElement {
   updateSelectedVariantId() {
     this.selectedVariantId = this.getSelectedVariant().value;
     var variant_price = "$" + this.getSelectedVariant().dataset.price / 100;
-
-    var each_price =  "$" + (this.getSelectedVariant().dataset.price / 100 / this.getSelectedVariant().dataset.pack).toFixed(2);
-    var save_price = "$" + (this.getSelectedVariant().dataset.price / 100 / this.getSelectedVariant().dataset.pack / 23).toFixed(2);
-
     document.querySelector('.product-price').innerHTML = variant_price;
-    document.querySelector('.product-price-save').innerHTML = each_price + " each. " + save_price + " per serving ";
     
-    console.log(save_price);
+    console.log(variant_price);
     // console.log('3) updated selected variant id: ', this.selectedVariantId);
     return this.selectedVariantId;
   }
